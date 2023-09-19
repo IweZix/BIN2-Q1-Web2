@@ -1,0 +1,18 @@
+### Read all film with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read all films sorted by title (minimum 120)
+GET {{baseUrl}}/films?duration=120
+
+### Create a film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Harry Potter et la coupe de feu",
+    "duration": 143,
+    "budget": 190,
+    "link":"google.com"
+}
+
