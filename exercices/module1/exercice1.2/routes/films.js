@@ -1,11 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var get = 0;
-var getFilm = 0;
-var postFilm = 0;
-var deleteFilm = 0;
-
 const FILMS = [
     {
         id: 1,
@@ -31,22 +26,9 @@ const FILMS = [
     },
 ];
 
-// s'éxécute à chaque reload du router films
-router.use((req, res, next) => {
-    console.log(`
-    Request counter :
-    - GET / : ${get}
-    - GET /films : ${getFilm}
-    - POST /films: ${postFilm}
-    - DELETE /films : ${deleteFilm}
-    `);
-    next();
-});
-
 // Read all the films from the list
 router.get('/', (req, res, next) => {
     console.log('GET /films');
-    getFilm++;
     res.json(FILMS);
 })
 
