@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-var */
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
